@@ -1,0 +1,52 @@
+<div>
+
+    <div>
+        <br/>
+        <div class="col-md-2">
+            <input type="text" class="form-control" placeholder="Search HIN" ng-model="HIN">
+        </div>
+
+        <div class="col-md-2">
+            <button class="btn btn-primary pull-right" ng-click="Search(HIN)">Search</button>
+        </div>
+
+        <div class="col-md-2">
+            <input type="text" class="form-control" placeholder="Search NIC" ng-model="NIC">
+        </div>
+
+        <div class="col-md-2">
+            <button class="btn btn-primary pull-right" ng-click="SearchNIC(NIC)">Search</button>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>HIN</th>
+                <th>First name</th>
+                <th>NIC</th>
+                <th>Telephone</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in patient">
+                <td>{{x.HIN}}</td>
+                <td>{{x.firstName}}</td>
+                <td>{{x.NIC}}</td>
+                <td>{{x.phone}}</td>
+                <td>{{x.Birthday}}</td>
+                <td>{{x.Address}}</td>
+                <td>    <button class="btn btn-primary pull-right" >Add To queue</button> </td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

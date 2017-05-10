@@ -1,0 +1,150 @@
+
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th>Complaint</th>
+            <th>VisitType</th>
+            <th>Remarks</th>
+            <th>Date</th>
+            <th></th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="v in visit">
+            <td>{{v.complaint}}</td>
+            <td>{{v.visitType}}</td>
+
+
+            <td> {{v.remarks}}  </td>
+            <td>{{v.date}}    </td>
+            <td>{{v._id}}    </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="row"  ng-repeat="v in visit">
+        <div class="col-md-6">
+            <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1default" data-toggle="tab">Examination</a></li>
+                        <li><a href="#tab2default" data-toggle="tab">Default 2</a></li>
+                        <li><a href="#tab3default" data-toggle="tab">Default 3</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#tab4default" data-toggle="tab">Default 4</a></li>
+                                <li><a href="#tab5default" data-toggle="tab">Default 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1default">
+                            <form name="ExamForm"  novalidate ng-submit="addExamination(v._id,exam)">
+
+                                <div class="form-group input-group" >
+                                    <span style="width: 185px"  class="input-group-addon">Exam Date Time</span>
+
+                                    <input  type="text" style="width:200px" class="form-control"  readonly name="ExamDate" value="{{date | date:'yyyy-MM-dd'}} " placeholder="">
+
+                                </div>
+
+                                <div class="form-group input-group" >
+
+                                    <span style="width: 185px"  class="input-group-addon">Height in <b>cm</b></span>
+
+                                    <input class="form-control" style="width:200px" required  ng-model="exam.height" type="number" min="0"
+                                           name="Height" placeholder=""/>
+                                </div>
+
+                                <div class="form-group input-group" >
+                                    <span style="width: 185px"  class="input-group-addon">Weight in <b>Kg</b></span>
+
+                                    <input class="form-control" style="width:200px" type="number" ng-model="exam.weight" required min="0"  name="Weight" placeholder="" />
+                                </div>
+
+                                <div class="form-group input-group" >
+                                    <span style="width: 185px"  class="input-group-addon">BMI</span>
+
+                                    <input  type="text" style="width:200px" class="form-control" value="{{bmi}}" readonly name="bmi" placeholder="">
+
+                                </div>
+                                <div class="form-group input-group" >
+                                    <span style="width: 185px"  class="input-group-addon">Temperature in <b>F*<sup>o</sup></b></span>
+
+                                    <input class="form-control" style="width:200px" type="number" ng-model="exam.temperature" required step="0.01" min="96" max="106" name="Temperature" placeholder="">
+
+                                </div>
+
+                                <div class="form-group input-group" >
+                                    <span style="width: 185px"  class="input-group-addon">Systolic Blood Preasure*</span>
+
+
+                                    <input class="form-control" style="width:200px" type="number" ng-model="exam.SBP" required min="50" max="240" name="SysBP" placeholder="" >
+                                </div>
+
+
+                                <div class="form-group input-group">
+                                    <span style="width: 185px"  class="input-group-addon">Diastolic Blood Preasure*</span>
+
+
+                                    <input class="form-control" style="width:200px" type="number" ng-model="exam.DBP" name="DiastBP" placeholder="" required   min="30" max="140"  >
+
+                                </div>
+
+
+
+                                <div class="col-md-1" >
+
+                                    <button class="btn btn-primary"  ng-disabled="ExamForm.$invalid" >Save</button>
+                                </div>
+                            </form>
+
+
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="tab2default">Default 2</div>
+                        <div class="tab-pane fade" id="tab3default">Default 3</div>
+                        <div class="tab-pane fade" id="tab4default">Default 4</div>
+                        <div class="tab-pane fade" id="tab5default">Default 5</div>
+                    </div>
+                </div>
+            </div>
+        </div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

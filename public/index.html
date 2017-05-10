@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS</title>
+    <base href="/app/">
+    <link rel="stylesheet" href="modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="modules/bootstrap/dist/css/bootstrap-theme.css">
+</head>
+<body ng-app="OPDApp">
+
+<div class="container">
+    <h2 class="header">Welcome to OPD App</h2>
+    <div ng-view></div>
+</div>
+<script src="modules/jquery/dist/jquery.min.js"></script>
+<script src="modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="modules/angular/angular.js"></script>
+<script src="modules/angular-route/angular-route.js"></script>
+<script src="modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+
+
+<script src="./js/app.module.js"></script>
+
+
+<script src="./js/services/patient.service.js"></script>
+<script src="./js/services/nurse.Service.js"></script>
+<script src="./js/controllers/main.controller.js"></script>
+<script src="./js/controllers/visit.controller.js"></script>
+<script src="./js/controllers/search.js"></script>
+<script src="./js/controllers/Details.controller.js"></script>
+<script src="./js/appRoutes.js"></script>
+<script src="./js/controllers/registration.controller.js"></script>
+</body>
+</html>
